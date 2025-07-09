@@ -76,10 +76,10 @@ if submitted:
     st.subheader("🔎 Prediction Result")
 
     if prediction == 1:
-        st.error(f"🚨 Likely to Churn (Confidence: {probability:.2f})")
+        st.error(f"🚨  Churn ")
         result_label = "Churn"
     else:
-        st.success(f"✅ Not Likely to Churn (Confidence: {1 - probability:.2f})")
+        st.success(f"✅ Not Churn")
         result_label = "Not Churn"
 
     # Show user input
@@ -87,11 +87,11 @@ if submitted:
         st.dataframe(input_data.T.rename(columns={0: "Value"}))
 
     # Pie chart
-    fig, ax = plt.subplots()
-    ax.pie([probability, 1 - probability],
-           labels=["Churn", "Not Churn"],
-           autopct='%1.1f%%',
-           colors=["#ff4d4d", "#5cb85c"],
-           startangle=90)
-    ax.axis("equal")
-    st.pyplot(fig)
+    # fig, ax = plt.subplots()
+    # ax.pie([probability, 1 - probability],
+    #        labels=["Churn", "Not Churn"],
+    #        autopct='%1.1f%%',
+    #        colors=["#ff4d4d", "#5cb85c"],
+    #        startangle=90)
+    # ax.axis("equal")
+    # st.pyplot(fig)
